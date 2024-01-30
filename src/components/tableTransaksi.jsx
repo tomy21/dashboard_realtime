@@ -3,11 +3,8 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { getAllData } from "../utils/api";
 
-const socket = io("https://api-testing-murex.vercel.app", {
-  extraHeaders: {
-    "Access-Control-Allow-Origin": "*",
-  },
-});
+const socket = io("https://api-testing-murex.vercel.app");
+// const socket = io("http://127.0.0.1:3005");
 
 const formatNumber = (num) => {
   const suffixes = ["", "K", "Mio", "B", "T"];

@@ -5,6 +5,7 @@ import { getTransactions, getSummaryWeekly } from "../utils/api";
 import DateRangeComponent from "./rangeDate";
 
 const socket = io("https://api-testing-murex.vercel.app");
+// const socket = io("http://127.0.0.1:3005");
 
 socket.on("getTransactions", (results) => {
   // setTotalData(results);
