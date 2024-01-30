@@ -52,10 +52,10 @@ const TopCard = () => {
 
     fetchData();
 
-    return () => {
-      socket.off("getTransactions");
-      socket.off("summaryDataWeekly");
-    };
+    // return () => {
+    //   socket.off("getTransactions");
+    //   socket.off("summaryDataWeekly");
+    // };
   }, []);
 
   return (
