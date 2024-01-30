@@ -33,9 +33,11 @@ const TopCard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        socket.on("getTransactions", (results) => {
-          setTotalData(results);
-          console.log({ dataSocket: results });
+        socket.on("getTransactions", (err) => {
+          // setTotalData(results);
+          // console.log({ dataSocket: results });
+          console.log(err.message);
+          console.log(err.description);
         });
         socket.on("summaryDataWeekly", (weekly) => {
           setTotalWeekly(weekly);
